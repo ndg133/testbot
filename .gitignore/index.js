@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 var prefix = "!";
 
-client.login("NTI0MDcxNDkzNTk2ODcyNzA2.DvixUA.82elh4hWtDz-kjALJoWPTTQk2RU");
+client.login(process.env.TOKEN);
 
 client.on("ready", () => {
   console.log("GamerBot et EolasBot sont allumés !");
