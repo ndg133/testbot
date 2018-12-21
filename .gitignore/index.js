@@ -8,6 +8,8 @@ var prefix = "!";
 
 client.login(process.env.TOKEN);
 
+client.login(process.env.TOK);
+
 client.on("ready", () => {
   console.clear();
   console.log("\nC:/Users/degai/Desktop/GamerBot> node index.js");
