@@ -12,7 +12,7 @@ client.on("ready", () => {
   console.clear();
   console.log("\nC:/Users/degai/Desktop/GamerBot> node index.js");
   console.log("\nPrincipaleBot est allumé !\n");
-  client.user.setActivity("se faire dévelloper par BestPaladin");
+  client.user.setActivity("Joyeux noël !");
 }); 
 
 var mc = ":robot: Vous n'avez pas la permission d'effectuer une commande dans les messages privés. :robot:";
