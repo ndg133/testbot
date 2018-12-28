@@ -12,7 +12,7 @@ client.on("ready", () => {
   console.clear();
   console.log("\nC:/Users/degai/Desktop/GamerBot> node index.js");
   console.log("\nPrincipaleBot est allumé !\n");
-  client.user.setActivity("Joyeux noël !");
+  client.user.setActivity("Bonne année !");
 }); 
 
 var mc = ":robot: Vous n'avez pas la permission d'effectuer une commande dans les messages privés. :robot:";
@@ -110,6 +110,14 @@ client.on("message", message => {
         .addField("unmute [mention]", "`Pour le staff` unmute le joueur mentionné")
         .setFooter("Demandé par " + message.author.username )
         message.channel.send(embed2);
+    }
+})
+
+client.on("message", message => {
+    if(message.content === "!ru") {
+      if(message.channel.type === "dm") return message.channel.send(mc);
+        message.channel.send("@everyone\n`Voici les règles du serveur :`\n`1.` Ne pas utiliser de pseudo a caractere nuisant.\n`2.` @everyone interdits en tant que membre (ou VIP)\n`3.` A l'oral comme à l'audio, merci de respecter les règles de politesses de la vraie vie. Tout signalement de nuisance  signalé sera passible d'un ban.\n`4.` Un service automatique de ban à été mis sur le serveur (pour + d'informations faites !aidebot).\n`5.` C'est correct d'avoir des opinions et de les exprimer clairement, mais essaye d'être gentil à ce sujet ...\n     (Si vous commencez à vous sentir sur le point d'exploser ... Faite une pause pour vous calmer !)\n`6.` Ce qui suit est interdit :\n     `a -` harcèlement / abus des autres membres (que ce soit le staff ou autre)\n     `b -` contenu injurieux, raciste, sexiste, sexuellement explicite ou offensant\n     `c -` liens vers des contenus piratés ou illégaux\n     `d -` partager des informations personnelles ou confidentielles sur un autre utilisateur ou sur soi même\n     `e -` spam (sauf dans le #spam-level-up-game), autopromotion ou publicité d'autres communautés / services\n     `f -` Ne pas usurper l'identité d'autres joueurs\n     `g -` abuser des problèmes n'est pas autorisé\n     `h -` pas de menaces de piratage ou de menaces contre le serveur\n     `i -` le texte zalgo (Čəćį ęşť űņ țėxţě żāłğő.)\n`7.` Gardez vos différends personnels privés.\n     `a -` Pas de querelle publique, merci de résoudre vos problèmes en privé.\n     `b -` Ne parle pas de choses d'argent réel avec quelqu'un qui vous possède quelque chose.\n`Code d'invitaton (pour vos amis) :` https://discord.gg/Pf8KY7M\n@everyone\nQuand vous avez tout lu, cliquez sur l'emoji :white_check_mark: !");
+        console.log("Un utilisateur (" + message.author.username +") à fait la commande !clear.")
     }
 })
 
