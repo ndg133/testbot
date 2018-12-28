@@ -18,12 +18,15 @@ client.on("ready", () => {
 var mc = ":robot: Vous n'avez pas la permission d'effectuer une commande dans les messages privés. :robot:";
 
 client.on("message", message => {
-    if(message.content === "!ping" || message.content === "?ping") {
-      if(message.channel.type === "dm") return message.channel.send(mc);
-        message.channel.send(":robot: Pong ! :robot:");
-        console.log("Un utilisateur (" + message.author.username +") à fait la commande !ping.")
-    }
-})
+  if(message.content === "!ping" || message.content === "?ping"){
+  console.log("Un utilisateur a dit !ping");
+  
+      message.channel.send(':robot: Pong ! :robot: \n Ping du bot : ')
+      .then(function(msgbot){
+          var milis = msgbot.createdTimestamp - message.createdTimestamp
+          msgbot.edit(msgbot.content + "``" + milis + "ms``")
+          })
+}})
 
 client.on("message", message => {
     if(message.content === "Kick moi, GamerBot !" || message.content === "Kick moi, EolasBot !") {
