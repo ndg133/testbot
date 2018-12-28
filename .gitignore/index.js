@@ -58,6 +58,15 @@ client.on("message", message => {
 })
 
 client.on("message", message => {
+    if(message.content === "?ru") {
+        if(message.channel.type === "dm") return message.channel.send(mc);
+        message.channel.send("Voici les rêglements du serveur Gamers:\n\n :earth_africa: Général :earth_africa: \n\n :arrow_right: Pas de spam\n :arrow_right: Pas de flood d'emoji (Pas plus que 5 dans une même phrase si non avertissement + suppresion du message\n :arrow_right: Pas de contenue pornografique, raciste ou conduisant à un sentiment de haine\n :arrow_right: Pas de message dans le mauvais salon risque d'avertissement + suppresion du message\n :arrow_right: Si vous trouver une façon de mentionner everyone ou here veuiller en avisée immédiatement un membre du staff qui sauras le rêgler\n :arrow_right: Si vous avez les permissions de parler dans un salon non-autorisée au membre, veuiller en aviser un membre du staff\n :arrow_right: Pas de spam mention si non mute 5 min ou si persicte ban\n\n:loud_sound: Vocal :loud_sound: \n\n :arrow_right: Pas de spam co reco ainsi créeant un bruit désagréable à entendre\n :arrow_right: Les insulte en vocal serons sanctionner par un ban 1 semaine\n :arrow_right: Toute personne (saufe staff) criant en vocal seras mute 10 min\n :arrow_right: Tout arcèlement en vocal seras sanctionner par un ban définitif\n\nAutre :\n\n Pas le droit de poster plus d’un lien par 24 heures si cette règle est pas respecté une suppression du lien sera mis en place plus un warn.\n :sunglasses:  La drague n'est pas autoriser sur le serveur:sunglasses:\n\nSi vous avez des problème qui ne vienne pas de à l'intérieure du serveur, vous vous inviterons à les rêgler autre par mais pas sur le serveur et ni en vocal\n\nCordialement  toute l'équipe de Gamers\n\nPS : Si la  | Team {Staff} juge nécessaire de devoir avertir un membre même si la règle est pas écrite, c’est permis mais cela va occasionné juste un warn pas de ban.\nQuand tu auras bien lu toutes les règles, clique sur le logo :white_check_mark: !");
+        console.log("Un utilisateur (" + message.author.username +") à fait la commande !rules.")
+        message.delete;
+    }
+})
+
+client.on("message", message => {
     if(message.content === "!help") {
       if(message.channel.type === "dm") return message.channel.send(mc);
         console.log("Un utilisateur (" + message.author.username +") à fait la commande !help.")
