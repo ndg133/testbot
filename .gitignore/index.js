@@ -29,6 +29,17 @@ client.on("message", message => {
 }})
 
 client.on("message", message => {
+  if(message.content === "*ping" || message.content === "?ping"){
+  console.log("Un utilisateur a dit !ping");
+  
+      message.channel.send('Ping du bot : ')
+      .then(function(msgbot){
+          var milis = msgbot.createdTimestamp - message.createdTimestamp
+          msgbot.edit(msgbot.content + "``" + milis + "ms``")
+          })
+}})
+
+client.on("message", message => {
     if(message.content === "Kick moi, GamerBot !" || message.content === "Kick moi, EolasBot !") {
       if(message.channel.type === "dm") return message.channel.send(mc);
         message.author.kick;
